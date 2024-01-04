@@ -21,14 +21,14 @@ export default function Home() {
         </div>
       </nav>
       </Box>
-        <section className='h-5/6 p-5'>Hero Section</section>
+        <section className='h-5/6 p-5 container'>Hero Section</section>
 
         <section className='bg-sky-500'>
           <Box>
             <div className='p-5'>
               <h3 className='text-xl font font-semibold text-center'>Join sekarang, dan dapatkan beberapa manfaat berikut</h3>
             </div>
-            <div className='grid grid-cols-3 place-items-center gap-2 justify-between'>
+            <div className='p-5 grid md:grid-cols-3 place-items-center gap-2'>
               <div className='h-full shadow container max-w-xs bg-white rounded'>
                 <div className='p-5 bg-emerald-400 rounded-t '>
                   Pendaftaran yang sangat mudah
@@ -54,7 +54,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div>footer</div>
           </Box>
         </section>
         <section>New Member Section</section>
