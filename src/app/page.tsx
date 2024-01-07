@@ -1,5 +1,6 @@
 import Box from '@/sharedcomponents/Box'
 import Button from '@/sharedcomponents/Button'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Home() {
@@ -21,23 +22,28 @@ export default function Home() {
           </div>
         </nav>
       </Box>
-        <section className='bg-emerald-500 min-h-96'>
+        <section className='bg-slate-300 min-h-96'>
           <Box>
-            <div className="section__content flex flex-col justify-evenly">
+            <div className='flex lg:flex-row flex-col'>
+              <div className="flex-1 section__content flex flex-col text-slate-900 justify-center">
               <div className="p-5">
-                <h1 className="text-4xl font-semibold text-white">Temukan Fotografer di samarinda hanya dengan sekali klik</h1>
+                <h1 className="text-2xl lg:text-4xl font-semibold">Temukan Fotografer di Samarinda hanya dengan sekali klik</h1>
               </div>
-              <div className="p-5 text-white space-y-5">
+              <div className="p-5 space-y-5">
                 <div>
                   <p>Kami adalah platform yang menyediakan wadah bagi bakat fotografi Anda untuk berkembang.</p>
                   <p>Dari pernikahan (wedding photography) hingga sesi potret pribadi,</p>
                   <p>Anda dapat mengejar minat Anda dan berbagi keahlian Anda dengan klien yang mencarinya.</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <Link href='/discover'><button className="border py-2 px-4 rounded">Jelajahi Fotografer</button></Link>
-                  <button className={`border py-2 px-4 rounded`}>Daftar Sebagai Fotografer</button>
+                  <Link href='/discover'><button className="bg-sky-500 text-white py-2 px-4 rounded">Jelajahi Fotografer</button></Link>
+                  <button className={`bg-emerald-500 text-white py-2 px-4 rounded`}>Daftar Sebagai Fotografer</button>
                 </div>
               </div>
+            </div>
+            <div className='flex justify-center items-center flex-1'>
+              <Image src='/hero.png' alt='hero image' width={500} height={500}/>
+            </div>
             </div>
           </Box>
         </section>

@@ -4,7 +4,7 @@ const Button = ({ text} : {
   text: string
 }) => {
   return (
-    <button className='whitespace-nowrap rounded border bg-sky-500 px-6 py-2 text-white'>{text}</button>
+    <button className='whitespace-nowrap rounded bg-sky-500 px-6 py-2 text-white'>{text}</button>
   )
 }
 
