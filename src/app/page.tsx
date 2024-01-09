@@ -6,47 +6,50 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      <Box>
-        <nav className='flex flex-row justify-between items-center p-5'>
-          <div className='text-2xl font-semibold'>Fotografer Samarinda</div>
-          <div className='flex-row flex items-center space-x-5'>
-            <ul className='lg:flex flex-row space-x-2 hidden'>
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Gallery</li>
-              <li>Contact Us</li>
-            </ul>
-            <div>
-              <Button text='Login or Register' />
+      <section className='bg-white'>
+        <Box>
+          <nav className='flex flex-row justify-between items-center p-5'>
+            <div className='text-2xl font-semibold'>Fotografer Samarinda</div>
+            <div className='flex-row flex items-center space-x-5'>
+              <ul className='lg:flex flex-row space-x-2 hidden'>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Gallery</li>
+                <li>Contact Us</li>
+              </ul>
+              <div>
+                <Button text='Login or Register' />
+              </div>
+            </div>
+          </nav>
+        </Box>
+      </section>
+
+      <section className='bg-slate-300 min-h-96'>
+        <Box>
+          <div className='flex lg:flex-row flex-col'>
+            <div className="flex-1 section__content flex flex-col text-slate-900 justify-center">
+            <div className="p-5">
+              <h1 className="text-2xl lg:text-4xl font-semibold">Temukan <span className='font-extrabold underline uppercase'>Fotografer</span> di <span className='font-extrabold underline uppercase'>Samarinda</span> hanya dengan sekali klik</h1>
+            </div>
+            <div className="p-5 space-y-5">
+              <div>
+                <p>Kami adalah platform yang menyediakan wadah bagi bakat fotografi Anda untuk berkembang.</p>
+                <p>Dari pernikahan (wedding photography) hingga sesi potret pribadi,</p>
+                <p>Anda dapat mengejar minat Anda dan berbagi keahlian Anda dengan klien yang mencarinya.</p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <Link href='/discover'><button className="bg-sky-500 text-white py-2 px-4 rounded">Jelajahi Fotografer</button></Link>
+                <button className={`bg-emerald-500 text-white py-2 px-4 rounded`}>Daftar Sebagai Fotografer</button>
+              </div>
             </div>
           </div>
-        </nav>
-      </Box>
-        <section className='bg-slate-300 min-h-96'>
-          <Box>
-            <div className='flex lg:flex-row flex-col'>
-              <div className="flex-1 section__content flex flex-col text-slate-900 justify-center">
-              <div className="p-5">
-                <h1 className="text-2xl lg:text-4xl font-semibold">Temukan Fotografer di Samarinda hanya dengan sekali klik</h1>
-              </div>
-              <div className="p-5 space-y-5">
-                <div>
-                  <p>Kami adalah platform yang menyediakan wadah bagi bakat fotografi Anda untuk berkembang.</p>
-                  <p>Dari pernikahan (wedding photography) hingga sesi potret pribadi,</p>
-                  <p>Anda dapat mengejar minat Anda dan berbagi keahlian Anda dengan klien yang mencarinya.</p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Link href='/discover'><button className="bg-sky-500 text-white py-2 px-4 rounded">Jelajahi Fotografer</button></Link>
-                  <button className={`bg-emerald-500 text-white py-2 px-4 rounded`}>Daftar Sebagai Fotografer</button>
-                </div>
-              </div>
-            </div>
-            <div className='flex justify-center items-center flex-1'>
-              <Image src='/hero.png' alt='hero image' width={500} height={500}/>
-            </div>
-            </div>
-          </Box>
-        </section>
+          <div className='flex justify-center items-center flex-1'>
+            <Image src='/hero.png' alt='hero image' width={500} height={500}/>
+          </div>
+          </div>
+        </Box>
+      </section>
 
         <section className='bg-sky-500'>
           <Box>

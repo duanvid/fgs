@@ -1,6 +1,8 @@
 'use client'
 
+import { signIn } from 'next-auth/react';
 import Image from 'next/image'
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 const Page = () => {
@@ -11,20 +13,25 @@ const Page = () => {
   }
 
   return (<main className='min-h-screen flex'>
-          <section className='hidden lg:flex lg:flex-1'>
-            Login Poster
+          <section className='hidden lg:flex lg:flex-1 items-center justify-center bg-gradient-to-b to-sky-500 from-emerald-600 p-5'>
+            <div>
+              <Image src="/hero.png" alt="Background image" width={500} height={500} />
+            </div>
           </section>
-          <section className='grow flex-1 flex items-center justify-center bg-gradient-to-b from-sky-500 to-emerald-600'>
-            <div className='flex flex-col bg-white p-10 rounded shadow space-y-5 w-full max-w-sm'>
+          <section className='grow flex-1 flex items-center justify-center bg-gradient-to-b from-sky-500 to-emerald-600 p-5'>
+            <div className='flex flex-col bg-white p-5 rounded shadow space-y-5 max-w-sm'>
               <div>
                 <h2 className="text-2xl font-bold text-sky-500">fotografersamarinda.com</h2>
               </div>
               <div>
-                <h3 className='font-semibold'>Selamat Datang Kembali!</h3>
+                <h3 className='font-semibold text-slate-800'>Selamat Datang Kembali!</h3>
                 <p className='text-xs font-semibold text-slate-500'>Silahkan login untuk melanjutkan</p>
               </div>
               <div className='space-y-5 flex flex-col items-center'>
                 <button
+                  onClick={() => signIn('google', {
+                    callbackUrl: '/profile',
+                  })}
                   className='shadow p-2 border font-semibold text-sm rounded flex flex-row items-center space-x-2'>
                   <Image src='googleIcon.svg' alt='google button' width={20} height={20}/>
                   <span className='text-slate-600'>Login dengan Google</span>
