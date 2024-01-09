@@ -5,21 +5,21 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
-      <section className='bg-white'>
+    <main className="flex min-h-screen flex-col font-poppins">
+      <section className='bg-white '>
         <Box>
           <nav className='flex flex-row justify-between items-center p-5'>
-            <div className='text-2xl font-semibold'>Fotografer Samarinda</div>
-            <div className='flex-row flex items-center space-x-5'>
-              <ul className='lg:flex flex-row space-x-2 hidden'>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Gallery</li>
-                <li>Contact Us</li>
-              </ul>
-              <div>
-                <Button text='Login or Register' />
-              </div>
+            <div className='text-2xl font-semibold text-sky-500'>Fotografer Samarinda</div>
+
+            <ul className='lg:flex flex-row space-x-2 hidden font-semibold'>
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Gallery</li>
+              <li>Contact Us</li>
+            </ul>
+
+            <div>
+              <Button text='Login or Register'/>
             </div>
           </nav>
         </Box>
@@ -30,7 +30,7 @@ export default function Home() {
           <div className='flex lg:flex-row flex-col'>
             <div className="flex-1 section__content flex flex-col text-slate-900 justify-center">
             <div className="p-5">
-              <h1 className="text-2xl lg:text-4xl font-semibold">Temukan <span className='font-extrabold underline uppercase'>Fotografer</span> di <span className='font-extrabold underline uppercase'>Samarinda</span> hanya dengan sekali klik</h1>
+              <h1 className="text-2xl lg:text-4xl font-semibold">Temukan <span className='font-extrabold text-3xl lg:text-5xl uppercase text-sky-600'>Fotografer</span> di <span className='font-extrabold text-3xl lg:text-5xl uppercase text-emerald-600'>Samarinda</span> hanya dengan sekali klik</h1>
             </div>
             <div className="p-5 space-y-5">
               <div>
@@ -39,8 +39,8 @@ export default function Home() {
                 <p>Anda dapat mengejar minat Anda dan berbagi keahlian Anda dengan klien yang mencarinya.</p>
               </div>
               <div className="flex flex-wrap gap-2">
-                <Link href='/discover'><button className="bg-sky-500 text-white py-2 px-4 rounded">Jelajahi Fotografer</button></Link>
-                <button className={`bg-emerald-500 text-white py-2 px-4 rounded`}>Daftar Sebagai Fotografer</button>
+                <Link href='/discover'><Button text='Jelajahi Fotografer' /></Link>
+                <Button text='Daftar Sebagai Fotografer' style='secondary'/>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function Home() {
               <h3 className='text-xl font font-semibold text-center'>Join sekarang, dan dapatkan beberapa manfaat berikut</h3>
             </div>
             <div className='p-5 grid md:grid-cols-3 place-items-center gap-2'>
-              <div className='h-full shadow container max-w-xs bg-white rounded'>
+              <div className='h-full shadow container bg-white rounded'>
                 <div className='p-5 bg-emerald-400 rounded-t '>
                   Pendaftaran yang sangat mudah
                 </div>
@@ -65,7 +65,7 @@ export default function Home() {
                   Mulai dengan mengisi data diri anda, lalu upload portofolio terbaik anda
                 </div>
               </div>
-              <div className='shadow container max-w-xs h-full bg-white rounded'>
+              <div className='shadow container h-full bg-white rounded'>
                 <div className='p-5 bg-emerald-400 rounded-t'>
                   akses ke pelatihan dan sumberdaya fotografi
                 </div>
@@ -73,7 +73,7 @@ export default function Home() {
                   apasaja akses dan pelatihannya
                 </div>
               </div>
-              <div className='shadow container max-w-xs bg-white rounded'>
+              <div className='shadow container bg-white rounded'>
                 <div className='p-5 bg-emerald-400 rounded-t'>
                   buat klien semakin mudah menemukan jasa anda
                 </div>
@@ -85,6 +85,20 @@ export default function Home() {
           </Box>
         </section>
         <section>New Member Section</section>
+        <section className='bg-sky-500'>
+          <Box>
+            <div className='p-5 space-x-5 flex items-center'>
+              <h3 className='text-2xl font-bold'>Trending PhotoShoot</h3>
+              <Button text='Lihat Semua Photoshoot' style='secondary' />
+            </div>
+            <div className='p-5 grid grid-cols-3 gap-2'>
+              <div className='bg-white rounded p-5 border-slate-500 border-b-8 hover:border-orange-500'>foto wisuda unmul</div>
+              <div className='bg-white rounded p-5 border-slate-500 border-b-8 hover:border-orange-500 shadow'>wedding di islamic</div>
+              <div className='bg-white rounded p-5 border-slate-500 border-b-8 hover:border-orange-500 shadow'>birthday party anak balita</div>
+            </div>
+            <div>section footer</div>
+          </Box>
+        </section>
     </main>
   )
 }
