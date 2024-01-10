@@ -21,7 +21,7 @@ const Page = () => {
           <section className='grow flex-1 flex items-center justify-center bg-gradient-to-b from-sky-500 to-emerald-600 p-5'>
             <div className='flex flex-col bg-white p-5 rounded shadow space-y-5 max-w-sm'>
               <div>
-                <h2 className="text-2xl font-bold text-sky-500">fotografersamarinda.com</h2>
+                <h2 className="text-xl font-bold text-sky-500">fotografersamarinda.com</h2>
               </div>
               <div>
                 <h3 className='font-semibold text-slate-800'>Selamat Datang Kembali!</h3>

@@ -84,17 +84,52 @@ export default function Home() {
             </div>
           </Box>
         </section>
-        <section>New Member Section</section>
+        <section>
+          <Box>
+            <div className='p-5'>
+              New Member Section
+            </div></Box>
+        </section>
         <section className='bg-sky-500'>
           <Box>
-            <div className='p-5 space-x-5 flex items-center'>
+            <div className='p-5 flex items-center flex-wrap gap-2 divide-x'>
               <h3 className='text-2xl font-bold'>Trending PhotoShoot</h3>
-              <Button text='Lihat Semua Photoshoot' style='secondary' />
+              <div className='p-2'>
+                <Button text='Lihat Semua Photoshoot' style='secondary' />
+              </div>
+              
             </div>
-            <div className='p-5 grid grid-cols-3 gap-2'>
-              <div className='bg-white rounded p-5 border-slate-500 border-b-8 hover:border-orange-500'>foto wisuda unmul</div>
-              <div className='bg-white rounded p-5 border-slate-500 border-b-8 hover:border-orange-500 shadow'>wedding di islamic</div>
-              <div className='bg-white rounded p-5 border-slate-500 border-b-8 hover:border-orange-500 shadow'>birthday party anak balita</div>
+            <div className='p-5 grid md:grid-cols-2 lg:grid-cols-3 gap-5 place-content-center'>
+              <div className='bg-white rounded'>
+                <Image src={'/wisuda.jpg'} width={500} height={300} alt='wisuda' className='rounded-t w-full max-h-52 object-cover object-center'/>
+                <div className='rounded-b gap-2 divide-y'>
+                  <h4 className='font-semibold p-5'>Foto Wisuda Unmul</h4>
+                  <div className='flex flex-row justify-between items-center gap-5 p-5'>
+                    <p className='text-sm font-semibold text-sky-500'>Rp 300.000</p>
+                    <Button text='Lihat Photoshoot' />
+                  </div>
+                </div>
+              </div>
+              <div className='bg-white rounded'>
+                <Image src={'/wisuda.jpg'} width={500} height={300} alt='wisuda' className='rounded-t w-full max-h-52 object-cover object-center'/>
+                <div className='rounded-b gap-2 divide-y'>
+                  <h4 className='font-semibold p-5'>Foto Wisuda Unmul</h4>
+                  <div className='flex flex-row justify-between items-center gap-5 p-5'>
+                    <p className='text-sm font-semibold text-sky-500'>Rp 300.000</p>
+                    <Button text='Lihat Photoshoot' />
+                  </div>
+                </div>
+              </div>
+              <div className='bg-white rounded'>
+                <Image src={'/wisuda.jpg'} width={500} height={300} alt='wisuda' className='rounded-t w-full max-h-52 object-cover object-center'/>
+                <div className='rounded-b gap-2 divide-y'>
+                  <h4 className='font-semibold p-5'>Foto Wisuda Unmul</h4>
+                  <div className='flex flex-row justify-between items-center gap-5 p-5'>
+                    <p className='text-sm font-semibold text-sky-500'>Rp 300.000</p>
+                    <Button text='Lihat Photoshoot' />
+                  </div>
+                </div>
+              </div>
             </div>
             <div>section footer</div>
           </Box>
