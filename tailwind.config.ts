@@ -8,6 +8,14 @@ const config: Config = {
     './src/sharedcomponents/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      'primary': '#2D2D66',
+      'secondary': '#38C675',
+      'white': '#ffffff',
+      'offwhite': '#ADB5BD',
+      'orange': '#FF9700',
+      'lightblue': '#3EAEFF',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

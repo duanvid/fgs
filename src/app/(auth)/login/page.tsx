@@ -1,5 +1,6 @@
 'use client'
 
+import Button from '@/sharedcomponents/Button';
 import { signIn } from 'next-auth/react';
 import Image from 'next/image'
 import Link from 'next/link';
@@ -13,15 +14,17 @@ const Page = () => {
   }
 
   return (<main className='min-h-screen flex'>
-          <section className='hidden lg:flex lg:flex-1 items-center justify-center bg-gradient-to-b to-sky-500 from-emerald-600 p-5'>
+          <section className='hidden items-center justify-center bg-gradient-to-b to-sky-500 from-emerald-600 p-5'>
             <div>
               <Image src="/hero.png" alt="Background image" width={500} height={500} />
             </div>
           </section>
           <section className='grow flex-1 flex items-center justify-center bg-gradient-to-b from-sky-500 to-emerald-600 p-5'>
-            <div className='flex flex-col bg-white p-5 rounded shadow space-y-5 max-w-sm'>
+            <div className='flex flex-col bg-white p-5 rounded shadow space-y-5 max-w-sm md:max-w-md sm:p-10'>
               <div>
-                <h2 className="text-xl font-bold text-sky-500">fotografersamarinda.com</h2>
+                <Link href={'/'}>
+                  <h2 className="text-xl font-bold text-sky-500 hover:underline">fotografersamarinda.com</h2>
+                </Link>
               </div>
               <div>
                 <h3 className='font-semibold text-slate-800'>Selamat Datang Kembali!</h3>
@@ -58,11 +61,11 @@ const Page = () => {
                       </div>
                       <p>Forgot Password</p>
                     </div>
-                    <button className='px-6 py-2 bg-sky-500 rounded self-center text-white text-sm font-semibold container'>Login</button>
+                    <Button text='Login'/>
                   </form>
                 </div>
               <div>
-                <p className='text-xs font-semibold text-slate-600'>Belum memiliki akun? Buat akun.</p>
+                <p className='text-xs font-semibold text-slate-600'>Belum memiliki akun? <span className='font-semibold text-orange'><Link href={'/signup'}>Buat akun.</Link></span></p>
               </div>
             </div>
           </div>
