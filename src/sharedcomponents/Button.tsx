@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FormEvent } from 'react'
 
 const Button = ({ text, style = 'primary', shape = 'square', size='medium', action, width='standard' } : {
   text: string;
@@ -6,13 +6,13 @@ const Button = ({ text, style = 'primary', shape = 'square', size='medium', acti
   shape?: 'square' | 'pills';
   size?: 'small' | 'medium' | 'large'
   width?: 'full' | 'standard'
-  action?: () => void
+  action?: (e: any) => void
 }) => {
   const buttonColor = (style === 'primary')
     ? 'bg-primary'
     : (style === 'secondary')
     ? 'bg-secondary'
-    : 'bg-slate-500'
+    : 'bg-white'
 
   const buttonShape = (shape === 'square')
     ? 'rounded'

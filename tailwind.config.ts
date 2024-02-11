@@ -15,6 +15,8 @@ const config: Config = {
       'offwhite': '#ADB5BD',
       'orange': '#FF9700',
       'lightblue': '#3EAEFF',
+      'red': '#FE5050',
+      'slate': '#495057'
     },
     extend: {
       backgroundImage: {

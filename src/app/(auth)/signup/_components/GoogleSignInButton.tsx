@@ -11,9 +11,9 @@ const GoogleSignInButton = () => {
       onClick={() => signIn('google', {
         callbackUrl: '/profile',
       })}
-      className='shadow p-2 border font-semibold text-sm rounded flex flex-row items-center space-x-2'>
+      className='shadow p-2 border border-offwhite font-semibold text-sm rounded flex flex-row items-center space-x-2'>
       <Image src='googleIcon.svg' alt='google button' width={20} height={20}/>
-      <span className='text-slate-600'>Login dengan Google</span>
+      <span className='text-slate'>Login dengan Google</span>
     </button>
   )
 }

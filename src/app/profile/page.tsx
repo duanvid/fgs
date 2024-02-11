@@ -11,7 +11,7 @@ const Profile = async () => {
   const session = await getServerSession(options)
   if (session && session.user) {
     return (
-      <div className='min-h-screen bg-white'>
+      <div className='min-h-dvh bg-white'>
         <div className='bg-primary p-4 bg-opacity-50'>
           <div className='flex flex-row items-center gap-4'>
             <Image
